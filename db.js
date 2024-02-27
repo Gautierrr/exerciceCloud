@@ -2,7 +2,6 @@ const { Sequelize } = require('sequelize')
 
 // database
 const sequelize = new Sequelize(
-  process.env.connectionString,
   process.env.DB_URL,
   // process.env.DB_NAME, // Database name
   // process.env.DB_USER, // User
