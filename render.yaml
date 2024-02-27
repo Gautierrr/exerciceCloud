@@ -1,13 +1,13 @@
 services:
   - type: web
-    env: node
+    runtime: node
     name: esgi.render.nodejs
-    repo: https://github.com/Gautierrr/exerciceCloud
-    # region: frankfurt
+    region: frankfurt
     plan: free
+    repo: https://github.com/Gautierrr/exerciceCloud
     branch: main
-    buildCommand: yarn
-    startCommand: yarn start
+    buildCommand: npm install
+    startCommand: npm run start
     envVars:
       - key:  DB_URL
         fromDatabase:
@@ -17,3 +17,4 @@ services:
 databases:
   - name: exercicecloud
     plan: free
+    region: frankfurt
