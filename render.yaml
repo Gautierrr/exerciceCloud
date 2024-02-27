@@ -9,7 +9,7 @@ services:
     buildCommand: npm && npm run build
     startCommand: npm start
     envVars:
-      - key:  DATABASE_URL
+      - key:  DB_URL
         fromDatabase:
           name: exercicecloud
           property: connectionString
