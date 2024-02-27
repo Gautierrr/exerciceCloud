@@ -3,6 +3,9 @@ services:
     env: node
     name: esgi.render.nodejs
     repo: https://github.com/Gautierrr/exerciceCloud
+    region: frankfurt
+    plan: free
+    branch: main
     buildCommand: npm && npm run build
     startCommand: npm start
     envVars:
@@ -11,3 +14,5 @@ services:
           name: exercicecloud
           property: connectionString
 
+databases:
+  - name: exercicecloud
