@@ -1,0 +1,18 @@
+services:
+  - type: web
+    env: node
+    name: esgi.render.nodejs
+    repo: https://github.com/Gautierrr/exerciceCloud
+    buildFilter:
+      paths:
+        - 
+    buildCommand: npm && npm build
+    startCommand: npm start
+    envVars:
+      - key:  postgres://exercicecloud:zWmQrqRxmAJQbQkb4W39y2mruqHoT5FM@dpg-cneud77sc6pc73cpppa0-a/exercicecloud
+        fromDatabase:
+          name: exercicecloud
+          property: connectionString
+
+databases:
+  - name: exercicecloud
