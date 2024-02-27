@@ -1,0 +1,15 @@
+services:
+  - type: web
+    env: node
+    name: esgi.render.nodejs
+    repo: https://github.com/Gautierrr/exerciceCloud
+    buildCommand: npm && npm run build
+    startCommand: npm start
+    envVars:
+      - key:  connectionString
+        fromDatabase:
+          name: exercicecloud
+          property: connectionString
+
+databases:
+  - name: exercicecloud
