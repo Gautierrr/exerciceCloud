@@ -16,3 +16,4 @@ services:
 
 databases:
   - name: exercicecloud
+    plan: free
